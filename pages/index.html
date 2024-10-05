@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tienda Online</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="logo">
+            <a href="index.html">Mi Tienda</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="products.html">Productos</a></li>
+                <li><a href="reviews.html">Reseñas</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon">
+            <a href="cart.html">
+                <span class="cart-count">0</span>
+                <img src="../img/shopping-cart-32.png" alt="Carrito">
+            </a>
+        </div>
+    </header>
+
+    <!-- MAIN SECTION -->
+    <main class="home-main">
+        <section class="hero">
+            <h1>Bienvenidos a Mi Tienda</h1>
+            <p>Los mejores productos al mejor precio</p>
+            <a href="products.html" class="btn-cta">Explorar Productos</a>
+        </section>
+
+        <section class="featured-products">
+            <h2>Productos Destacados</h2>
+            <div class="product-grid">
+                <!-- Productos generados por JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="contact.html">Contacto</a>
+            <a href="#">Términos y Condiciones</a>
+        </div>
+        <p>&copy; 2024 Mi Tienda - Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../api/products.js"></script>
+</body>
+
+</html>

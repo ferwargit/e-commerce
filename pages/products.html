@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Mi Tienda Online</title>
+
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <!-- Estilos principales -->
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="logo">
+            <a href="index.html">Mi Tienda</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="products.html">Productos</a></li>
+                <li><a href="reviews.html">Reseñas</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon">
+            <a href="cart.html">
+                <span class="cart-count">0</span>
+                <img src="../img/shopping-cart-32.png" alt="Carrito">
+            </a>
+        </div>
+    </header>
+
+    <!-- MAIN SECTION -->
+    <main class="products-main">
+        <section class="products-header">
+            <h1>Todos los Productos</h1>
+
+            <!-- Filtros de productos (opcional) -->
+            <div class="filters">
+                <select id="categoryFilter">
+                    <option value="all">Todas las Categorías</option>
+                    <option value="electronics">Electrónica</option>
+                    <option value="jewelery">Joyería</option>
+                    <option value="men's clothing">Ropa de Hombre</option>
+                    <option value="women's clothing">Ropa de Mujer</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Grid de productos -->
+        <section class="product-grid">
+            <!-- Los productos se cargarán aquí dinámicamente con JavaScript -->
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="contact.html">Contacto</a>
+            <a href="#">Términos y Condiciones</a>
+        </div>
+        <p>&copy; 2024 Mi Tienda - Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script para cargar los productos desde la API -->
+    <script src="../api/fetchProducts.js"></script>
+</body>
+
+</html>

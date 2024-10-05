@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Carrito - Mi Tienda Online</title>
+
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <!-- Estilos principales -->
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="logo">
+            <a href="index.html">Mi Tienda</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="products.html">Productos</a></li>
+                <li><a href="reviews.html">Reseñas</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon">
+            <a href="cart.html">
+                <span class="cart-count">0</span>
+                <img src="../img/shopping-cart-32.png" alt="Carrito">
+            </a>
+        </div>
+    </header>
+
+    <main class="cart-main">
+        <h1>Tu Carrito de Compras</h1>
+        <div class="cart-items">
+            <!-- Productos añadidos dinámicamente aquí -->
+        </div>
+        <div class="cart-total">
+            <h3>Total: $<span id="cart-total">0.00</span></h3>
+            <button class="btn-checkout">Proceder al Pago</button>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="contact.html">Contacto</a>
+            <a href="#">Términos y Condiciones</a>
+        </div>
+        <p>&copy; 2024 Mi Tienda - Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../api/cart.js"></script>
+</body>
+
+</html>
