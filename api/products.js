@@ -69,14 +69,6 @@ class ProductCard {
             text: this.product.title
         });
 
-        // const title = DOMHelpers.createElement({
-        //     tag: 'h3',
-        //     className: 'card-title', // Cambiamos el nombre de clase
-        //     text: this.product.title,
-        //     attributes: { style: `line-height: ${this.product.title.length / 15}em;` } // Ajustamos la línea por línea dinámicamente
-        // });
-        
-
         const price = DOMHelpers.createElement({
             tag: 'p',
             className: 'price',
