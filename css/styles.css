@@ -107,24 +107,24 @@ a {
     gap: 10px;
 }
 
-.filters select,
+/* .filters select,
 .filters input {
     padding: 5px;
     border: 1px solid #bdc3c7;
     border-radius: 5px;
-}
+} */
 
-.filters button {
+/* .filters button {
     padding: 5px 10px;
     background-color: #e74c3c;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
+} */
 
 /* Grid de productos */
-.product-grid {
+/* .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
@@ -161,4 +161,4 @@ a {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
+} */
