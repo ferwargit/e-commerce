@@ -1,6 +1,10 @@
 # e-commerce
 
-Este proyecto es un sitio web de comercio electrónico responsivo creado utilizando HTML, CSS y JavaScript. El objetivo del sitio es proporcionar una plataforma para que los usuarios puedan explorar y comprar productos de manera fácil y segura.
+Este proyecto es un sitio web de comercio electrónico responsivo creado utilizando HTML, CSS y JavaScript como parte del curso de Front-End JS en TalentoTech (2do Cuatrimestre 2024). El objetivo del sitio es proporcionar una plataforma para que los usuarios puedan explorar y comprar productos de manera fácil y segura.
+
+## Descripción del proyecto
+
+Este proyecto es un trabajo integrador que busca demostrar las habilidades adquiridas en el curso de Front-End JS. El sitio web cuenta con una interfaz de usuario responsiva y fácil de usar, que permite a los usuarios navegar y encontrar productos de manera eficiente.
 
 ## Características
 
@@ -17,6 +21,7 @@ Este proyecto es un sitio web de comercio electrónico responsivo creado utiliza
 - CSS3
 - JavaScript
 - API de productos de Fake Store API
+- Fuentes de Google: Poppins
 
 ## Estructura del proyecto
 
@@ -37,8 +42,15 @@ Para ejecutar el proyecto, simplemente clona el repositorio y abre el archivo `
 
 ## Deploy
 
-El sitio web ha sido deployado en Netlify y se puede acceder a través de la siguiente URL: https://e-commerce-appweb.netlify.app/
+El sitio web ha sido deployado en Netlify.
+- https://e-commerce-appweb.netlify.app/
 
 ## Licencia
 
 Este proyecto está bajo la licencia MIT. Puedes encontrar más información en el archivo `LICENSE`.
+
+## Referencias
+
+- Fake Store API: https://fakestoreapi.com/
+- Fuentes de Google: https://fonts.google.com/
+- Poppins: https://fonts.google.com/specimen/Poppins
