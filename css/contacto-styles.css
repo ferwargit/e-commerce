@@ -1,0 +1,68 @@
+.hero {
+    background-color: #52708f;
+    color: #fff;
+    padding: 30px 30px;
+    text-align: center;
+    min-height: 600px; /* Agregué esta línea para establecer una altura fija para el hero */
+    display: flex; /* Agregué esta línea para que el contenido del hero se centre verticalmente */
+    justify-content: center; /* Agregué esta línea para que el contenido del hero se centre verticalmente */
+    align-items: center; /* Agregué esta línea para que el contenido del hero se centre horizontalmente */
+}
+
+.hero-inner {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: auto; /* Cambié la altura a auto */
+    overflow: hidden; /* Agregué esta línea para que el contenido no se salga del .hero-inner */
+    margin: auto; /* Agregué esta línea para que el .hero-inner se centre verticalmente dentro del .hero */
+}
+
+.hero h2 {
+    margin-top: 0;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: center; /* Agregué esta línea para que el contenido del form-group se centre horizontalmente */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-cta {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-cta:hover {
+    background-color: #c0392b;
+}
