@@ -68,3 +68,28 @@
 .btn-cta:hover {
     background-color: #c0392b;
 }
+
+/* Pantallas pequeñas (teléfonos) */
+@media (max-width: 768px) {
+    .hero {
+        padding: 20px 10px;
+    }
+    .hero-inner {
+        padding: 10px;
+    }
+}
+
+/* Pantallas medianas (tabletas) */
+@media (max-width: 992px) {
+    .hero {
+        padding: 30px 20px;
+    }
+    .hero-inner {
+        padding: 15px;
+    }
+}
+
+/* Pantallas grandes (computadoras de escritorio) */
+@media (min-width: 1200px) {
+    /* No es necesario agregar nada aquí, ya que los estilos ya están funcionando bien */
+}
