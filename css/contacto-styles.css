@@ -3,7 +3,7 @@
     color: #fff;
     padding: 30px 30px;
     text-align: center;
-    min-height: 600px; /* Agregué esta línea para establecer una altura fija para el hero */
+    min-height: 734px; /* Agregué esta línea para establecer una altura fija para el hero */
     display: flex; /* Agregué esta línea para que el contenido del hero se centre verticalmente */
     justify-content: center; /* Agregué esta línea para que el contenido del hero se centre verticalmente */
     align-items: center; /* Agregué esta línea para que el contenido del hero se centre horizontalmente */
