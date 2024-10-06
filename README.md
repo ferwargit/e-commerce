@@ -24,6 +24,7 @@ El proyecto se divide en las siguientes secciones:
 
 - `index.html`: Página principal del sitio web
 - `productos.html`: Sección de productos con filtros de categorías y detalles de cada producto
+- `resenias.html`: Sección de reseñas para que los usuarios puedan leer opiniones de otros clientes
 - `contacto.html`: Formulario de contacto para que los usuarios puedan enviar mensajes al equipo de soporte
 - `cart.html`: Carrito de compras con función de pago
 - `css`: Carpeta que contiene los archivos de estilos CSS
@@ -33,6 +34,10 @@ El proyecto se divide en las siguientes secciones:
 ## Instalación y ejecución
 
 Para ejecutar el proyecto, simplemente clona el repositorio y abre el archivo `index.html` en un navegador web. No se requiere ninguna instalación adicional.
+
+## Deploy
+
+El sitio web ha sido deployado en Netlify y se puede acceder a través de la siguiente URL: https://e-commerce-appweb.netlify.app/
 
 ## Licencia
 
