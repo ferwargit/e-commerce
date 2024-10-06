@@ -29,7 +29,6 @@
     margin-bottom: 15px;
     /* background-color: #f8f9fa; */
     /* background-color: #29c9fa; */
-    /* background-color: #; */
     border-radius: 4px;
     overflow: hidden;
     display: flex;
@@ -45,10 +44,6 @@
     object-fit: cover;
     transition: opacity 0.3s ease;
 }
-
-/* .product-image {
-    
-} */
 
 .card h3 {
     margin: 5px 0;
