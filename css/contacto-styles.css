@@ -3,10 +3,11 @@
     color: #fff;
     padding: 30px 30px;
     text-align: center;
-    min-height: 734px; /* Agregué esta línea para establecer una altura fija para el hero */
-    display: flex; /* Agregué esta línea para que el contenido del hero se centre verticalmente */
-    justify-content: center; /* Agregué esta línea para que el contenido del hero se centre verticalmente */
-    align-items: center; /* Agregué esta línea para que el contenido del hero se centre horizontalmente */
+    /* min-height: 734px 742; */
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-inner {
@@ -14,9 +15,10 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: auto; /* Cambié la altura a auto */
-    overflow: hidden; /* Agregué esta línea para que el contenido no se salga del .hero-inner */
-    margin: auto; /* Agregué esta línea para que el .hero-inner se centre verticalmente dentro del .hero */
+    /* height: auto; */
+    /* height: 100%; */
+    overflow: hidden;
+    /* margin: auto; */
 }
 
 .hero h2 {
@@ -27,7 +29,7 @@
 
 .form-group {
     margin-bottom: 20px;
-    text-align: center; /* Agregué esta línea para que el contenido del form-group se centre horizontalmente */
+    text-align: center;
 }
 
 .form-group label {
