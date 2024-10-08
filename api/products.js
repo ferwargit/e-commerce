@@ -40,7 +40,7 @@ class ProductCard {
 
         const img = DOMHelpers.createElement({
             tag: 'img',
-            className: 'product-image',
+            className: 'product-image1',
             attributes: {
                 src: this.product.image,
                 alt: this.product.title
