@@ -688,6 +688,10 @@ footer {
         height: auto;
     }
 
+    .promo-image {
+        width: 100%;
+    }
+
     .promo-content {
         padding: 30px;
     }
