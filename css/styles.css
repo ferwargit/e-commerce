@@ -105,7 +105,7 @@ nav {
     background-color: rgb(102, 136, 240);
 }
 
-#navbar-links a {
+/* #navbar-links a {
     margin-left: 120px;
     padding: 8px 25px;
     border-radius: 7px;
@@ -119,7 +119,7 @@ nav {
     -moz-transition: 0.3s ease-in-out;
     -ms-transition: 0.3s ease-in-out;
     -o-transition: 0.3s ease-in-out;
-}
+} */
 
 #navbar-cart {
     margin-left: 60px;
@@ -589,29 +589,48 @@ footer {
 
     #navbar-links {
         display: none;
-        width: 100%;
-        background-color: #fff;
         position: absolute;
         top: 100%;
         left: 0;
+        width: 100%;
+        background-color: #fff;
         padding: 20px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        align-items: center;
     }
 
-    #navbar-links li {
+    /* #navbar-links li {
         margin: 15px 0;
+        text-align: center;
+    } */
+
+    #navbar-links.active {
+        display: flex;
+    }
+
+    #navbar-links a {
+        margin: 10px 0;
+        width: 100%;
         text-align: center;
     }
 
     #navbar-cart {
-        margin: 15px 0;
+        margin-left: 0;
+        margin-top: 10px;
     }
 
     /* Añadir botón hamburguesa */
     .hamburger-menu {
         display: block;
-        cursor: pointer;
-        padding: 10px;
+        /* cursor: pointer;
+        padding: 10px; */
+    }
+
+    /* Asegurar que los items del menú estén en columna */
+    #navbar-links > * {
+        width: 100%;
+        margin: 10px 0;
     }
 
     .hamburger-menu span {
@@ -677,6 +696,14 @@ footer {
         justify-content: center;
         flex-wrap: wrap;
         gap: 10px;
+    }
+}
+
+/* Garantizar que el menú se muestre correctamente en desktop */
+@media screen and (min-width: 993px) {
+    #navbar-links {
+        display: flex !important;
+        flex-direction: row !important;
     }
 }
 
