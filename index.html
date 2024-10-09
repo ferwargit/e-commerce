@@ -285,27 +285,12 @@
             const navLinks = document.querySelector('#navbar-links');
 
             hamburger.addEventListener('click', function () {
-                // Toggle para el menú
-                if (navLinks.style.display === 'flex') {
-                    navLinks.style.display = 'none';
-                } else {
-                    navLinks.style.display = 'flex';
-                    navLinks.style.flexDirection = 'column';
-                    navLinks.style.position = 'absolute';
-                    navLinks.style.top = '100%';
-                    navLinks.style.left = '0';
-                    navLinks.style.right = '0';
-                    navLinks.style.backgroundColor = '#fff';
-                    navLinks.style.padding = '20px';
-                    navLinks.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
-                }
-
-                // Animación para el ícono hamburguesa
-                // this.classList.toggle('active');
+                // Solo alternamos las clases active
                 hamburger.classList.toggle('active');
-        navLinks.classList.toggle('active');
+                navLinks.classList.toggle('active');
             });
         });
+    </script>
     </script>
 </body>
 

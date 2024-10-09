@@ -23,6 +23,7 @@ nav {
     justify-content: space-between;
     place-items: center;
     padding: 15px;
+    position: relative;
 }
 
 /* Estilos para el menú hamburguesa */
@@ -572,17 +573,26 @@ footer {
 /* Medium devices (tablets, hasta 992px) */
 @media screen and (max-width: 992px) {
 
+    #navbar {
+        width: 95%;
+        position: relative;
+    }
+
     #navbar-links {
         display: none;
         position: absolute;
         top: 100%;
+        left: auto;
         right: 0;
-        width: 200px;
-        background-color: #fff;
+        width: 30%;
+        /* background-color: #fff; */
+        background-color: #edf2fb;
         padding: 10px 0;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         flex-direction: column;
-        align-items: flex-end;
+        /* align-items: flex-start; */
+        /* align-items: flex-end; */
+        z-index: 1000;
     }
 
     #navbar-links.active {
@@ -594,20 +604,23 @@ footer {
         flex-direction: column;
         padding: 0;
         margin: 0;
-        align-items: flex-end;
+        /* align-items: flex-end; */
+        /* align-items: flex-start; */
     }
     
     #navbar-links li {
         margin: 5px 0;
-        width: auto;
+        width: 100%;
         padding: 0 20px;
-        text-align: right;
+        /* text-align: right; */
+        /* text-align: left; */
     }
 
     #navbar-links a {
         display: block;
         padding: 8px 0;
         text-align: right;
+        /* text-align: left; */
     }
 
     #navbar-cart {
@@ -615,13 +628,15 @@ footer {
         width: auto;
         padding: 0 20px;
         text-align: right;
+        /* text-align: left; */
     }
 
     /* Asegurar que el carrito esté alineado con los otros elementos */
     #navbar-cart a {
         display: block;
         padding: 8px 0;
-        text-align: right;
+        /* text-align: right; */
+        /* text-align: left; */
     }
 
     /* Añadir botón hamburguesa */
