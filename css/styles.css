@@ -600,24 +600,36 @@ footer {
         align-items: center;
     }
 
-    /* #navbar-links li {
-        margin: 15px 0;
-        text-align: center;
-    } */
+    #navbar-links li {
+        margin: 0 15px;
+        /* text-align: center; */
+    }
 
     #navbar-links.active {
         display: flex;
     }
 
-    #navbar-links a {
+    #navbar-links ul {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin-bottom: 15px;
+    }
+    
+
+
+    /* #navbar-links a {
         margin: 10px 0;
         width: 100%;
         text-align: center;
-    }
+    } */
 
     #navbar-cart {
-        margin-left: 0;
-        margin-top: 10px;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
 
     /* Añadir botón hamburguesa */
