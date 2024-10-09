@@ -762,6 +762,10 @@ footer {
     .promo-content h2 {
         font-size: 28px;
     }
+
+    .promo-image {
+        width: 100%;
+    }
 }
 
 /* Extra small devices (phones, hasta 576px) */
@@ -803,6 +807,10 @@ footer {
     /* Promo section */
     .promo-box {
         margin: 20px;
+    }
+
+    .promo-image {
+        width: 100%;
     }
 
     .promo-content h2 {
