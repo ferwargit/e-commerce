@@ -25,6 +25,36 @@ nav {
     padding: 15px;
 }
 
+/* Estilos para el menú hamburguesa */
+.hamburger-menu {
+    display: none; /* Oculto por defecto en desktop */
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: rgb(64, 64, 64);
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* Animación del ícono hamburguesa cuando está activo */
+.hamburger-menu.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
 #navbar-links {
     display: flex;
     flex-direction: row;
@@ -535,30 +565,228 @@ footer {
     gap: 10px;
 } */
 
-/* MEDIA QUERIES */
+/* Large devices (laptops/desktops, hasta 1200px) */
+@media screen and (max-width: 1200px) {
+    #navbar {
+        width: 95%;
+    }
 
-@media (max-width: 768px) {
+    #home-top-wrapper {
+        width: 95%;
+    }
+
+    .product-section-description {
+        width: 60%;
+    }
+
+    .promo-box {
+        width: 85%;
+    }
+}
+
+/* Medium devices (tablets, hasta 992px) */
+@media screen and (max-width: 992px) {
+
+    #navbar-links {
+        display: none;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    #navbar-links li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    #navbar-cart {
+        margin: 15px 0;
+    }
+
+    /* Añadir botón hamburguesa */
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .hamburger-menu span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: rgb(64, 64, 64);
+        margin: 5px 0;
+        transition: 0.3s;
+    }
+
+    /* Home top section adjustments */
+    #home-top-wrapper {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    #home-top-text {
+        width: 80%;
+        margin-bottom: 40px;
+    }
+
+    #home-top-image img {
+        max-width: 350px;
+    }
+
+    /* Products section adjustments */
+    ul.product-section-items-wrapper {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .product-item {
+        width: 80%;
+        max-width: none;
+    }
+
+    /* Promo section adjustments */
+    .promo-box {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .promo-content {
+        padding: 30px;
+    }
+
+    /* Footer adjustments */
+    #footer-social-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    #footer-bottom ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+/* Small devices (landscape phones, hasta 768px) */
+@media screen and (max-width: 768px) {
+
+    /* Home top section */
+    #home-top-container {
+        height: auto;
+        padding-top: 100px;
+    }
+
+    #home-top-text {
+        width: 95%;
+    }
+
     #home-top-text h1 {
-        font-size: 30px;
+        font-size: 36px;
     }
 
+    /* Collection section - ocultar según requerimiento */
     #collection-container {
+        display: none;
+    }
+
+    /* Product section adjustments */
+    .product-section-container h1 {
+        font-size: 32px;
+    }
+
+    .product-section-description {
+        width: 90%;
+    }
+
+    .product-item {
+        width: 90%;
+    }
+
+    /* Promo section */
+    .promo-content h2 {
+        font-size: 28px;
+    }
+}
+
+/* Extra small devices (phones, hasta 576px) */
+@media screen and (max-width: 576px) {
+
+    /* Navbar */
+    #navbar {
+        width: 100%;
         padding: 10px;
     }
 
-    .product-image {
-        height: 150px;
+    #navbar-logo img {
+        width: 120px;
+        height: 34px;
     }
 
-    .product-title {
-        font-size: 14px;
+    /* Home top section */
+    #home-top-text h1 {
+        font-size: 28px;
     }
 
-    .product-text {
-        padding: 10px;
+    #home-top-text p {
+        font-size: 16px;
     }
 
-    .site-footer {
-        padding: 10px;
+    #home-top-image img {
+        max-width: 280px;
+    }
+
+    /* Product section */
+    .product-section-container {
+        padding: 20px;
+    }
+
+    .product-section-container h1 {
+        font-size: 28px;
+    }
+
+    /* Promo section */
+    .promo-box {
+        margin: 20px;
+    }
+
+    .promo-content h2 {
+        font-size: 24px;
+    }
+
+    .promo-content p {
+        font-size: 15px;
+    }
+
+    /* Footer */
+    #footer-top {
+        width: 90%;
+    }
+}
+
+/* Para garantizar transiciones suaves en el menú hamburguesa */
+@media screen and (min-width: 993px) {
+    #navbar-links {
+        display: flex !important;
+    }
+}
+
+/* Optimizaciones de rendimiento para dispositivos móviles */
+@media screen and (max-width: 992px) {
+    * {
+        transition: none !important;
+        animation: none !important;
     }
 }

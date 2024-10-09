@@ -18,6 +18,11 @@
             <div id="navbar-logo">
                 <img src="img/Logo/LogoColor3.png" alt="Logo" width="140" height="40">
             </div>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <div id="navbar-links">
                 <ul>
                     <li><a href="pages/productos.html">Productos</a></li>
@@ -274,6 +279,32 @@
 
     <script src="api/products.js"></script>
     <script src="js/scroll.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.querySelector('.hamburger-menu');
+            const navLinks = document.querySelector('#navbar-links');
+
+            hamburger.addEventListener('click', function () {
+                // Toggle para el menú
+                if (navLinks.style.display === 'flex') {
+                    navLinks.style.display = 'none';
+                } else {
+                    navLinks.style.display = 'flex';
+                    navLinks.style.flexDirection = 'column';
+                    navLinks.style.position = 'absolute';
+                    navLinks.style.top = '100%';
+                    navLinks.style.left = '0';
+                    navLinks.style.right = '0';
+                    navLinks.style.backgroundColor = '#fff';
+                    navLinks.style.padding = '20px';
+                    navLinks.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
+                }
+
+                // Animación para el ícono hamburguesa
+                this.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 
 </html>
