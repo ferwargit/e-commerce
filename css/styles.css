@@ -656,14 +656,23 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.2);
+        border: 2px solid black;
+        border-radius: var(--border-radius-full);
+
     }
 
     .hamburger-menu span {
-        display: block;
+        /* display: block;
         width: 25px;
-        height: 3px;
+        height: 3px; */
         background-color: var(--color-gray-dark);
-        margin: 5px 0;
+        /* margin: 5px 0; */
+
+        height: 3px;
     }
 
     /* Menu overlay */
