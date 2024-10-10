@@ -60,6 +60,7 @@ nav {
 
 .hamburger-menu {
     display: none;
+    /* display: flex; */
     cursor: pointer;
     padding: var(--spacing-sm);
     z-index: 1000;
@@ -84,6 +85,16 @@ nav {
     margin: 4px auto;
     transition: transform var(--transition-default), opacity var(--transition-default);
     border-radius: 2px;
+}
+
+/* Cuando el menú está activo */
+.hamburger-menu.active {
+    background: transparent;
+    /* Quitar fondo */
+    border: none;
+    /* Quitar borde */
+    z-index: -1;
+    /* Mandar el botón detrás del contenido */
 }
 
 .hamburger-menu.active span:nth-child(1) {
@@ -549,6 +560,7 @@ footer {
 
 /* Large devices (laptops/desktops, hasta 1200px) */
 @media screen and (max-width: 1200px) {
+
     #navbar,
     #home-top-wrapper {
         width: 95%;
@@ -565,6 +577,7 @@ footer {
 
 /* Medium devices (tablets, hasta 992px) */
 @media screen and (max-width: 992px) {
+
     /* Navbar adjustments */
     #navbar {
         width: 95%;
@@ -736,6 +749,7 @@ footer {
 
 /* Menu transitions */
 @media screen and (max-width: 992px) {
+
     #navbar-links,
     #navbar-links li,
     #navbar-links a,
@@ -756,6 +770,7 @@ footer {
 
 /* Small devices (landscape phones, hasta 768px) */
 @media screen and (max-width: 768px) {
+
     /* Home section */
     #home-top-container {
         height: auto;
@@ -800,6 +815,7 @@ footer {
 
 /* Extra small devices (phones, hasta 576px) */
 @media screen and (max-width: 576px) {
+
     /* Navbar */
     #navbar {
         width: 100%;
@@ -842,6 +858,7 @@ footer {
         h2 {
             font-size: 24px;
         }
+
         p {
             font-size: 15px;
         }
