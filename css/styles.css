@@ -584,7 +584,7 @@ footer {
         top: 100%;
         left: auto;
         right: 0;
-        width: 30%;
+        width: auto;
         /* background-color: #fff; */
         background-color: #edf2fb;
         padding: 10px 0;
