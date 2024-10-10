@@ -28,39 +28,57 @@ nav {
 
 /* Estilos para el menú hamburguesa */
 .hamburger-menu {
-    display: none; /* Oculto por defecto en desktop */
+    display: none;
     cursor: pointer;
     padding: 10px;
     z-index: 1000;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(65, 105, 255, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.hamburger-menu:hover {
+    background: rgba(65, 105, 255, 0.1);
 }
 
 .hamburger-menu span {
     display: block;
-    width: 25px;
-    height: 3px;
+    width: 22px;
+    height: 2px;
     background-color: rgb(64, 64, 64);
-    margin: 5px 0;
-    transition: 0.4s;
+    margin: 4px auto;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    border-radius: 2px;
 }
 
-/* Animación del ícono hamburguesa cuando está activo */
+/* Animación suave del ícono hamburguesa */
 .hamburger-menu.active span:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
+    transform: translateY(6px) rotate(45deg);
 }
 
 .hamburger-menu.active span:nth-child(2) {
     opacity: 0;
+    transform: translateX(-10px);
 }
 
 .hamburger-menu.active span:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
+    transform: translateY(-6px) rotate(-45deg);
 }
 
 /* Estilos base del navbar */
-#navbar-links {
+/* #navbar-links {
     display: flex;
     flex-direction: row;
     place-items: center;
+} */
+
+/* Menú desplegable mejorado */
+#navbar-links {
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 #navbar-links ul {
@@ -586,7 +604,7 @@ footer {
         right: 0;
         width: auto;
         /* background-color: #fff; */
-        background-color: #edf2fb;
+        background-color: rgb(237, 242, 251);
         padding: 10px 0;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         flex-direction: column;
@@ -607,7 +625,7 @@ footer {
         /* align-items: flex-end; */
         /* align-items: flex-start; */
     }
-    
+
     #navbar-links li {
         margin: 5px 0;
         width: 100%;
@@ -641,13 +659,109 @@ footer {
 
     /* Añadir botón hamburguesa */
     .hamburger-menu {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     /* Asegurar que los items del menú estén en columna */
-    #navbar-links > * {
+    /* #navbar-links>* {
         width: 100%;
         margin: 10px 0;
+    } */
+
+    #navbar-links {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 29vh;
+        width: 130px;
+        /* background: rgba(255, 255, 255, 0.95); */
+        background: rgba(237, 242, 251, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 80px 0;
+        transform: translateX(100%);
+        opacity: 0;
+        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+}
+
+    #navbar-links.active {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    #navbar-links ul {
+        padding: 0;
+        margin: 0;
+    }
+    
+    #navbar-links li {
+        margin: 0;
+        padding: 0;
+        opacity: 0;
+        transform: translateX(20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        transition-delay: calc(var(--item-index) * 0.1s);
+    }
+
+    #navbar-links.active li {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    #navbar-links a {
+        display: block;
+        padding: 15px 20px;
+        font-size: 18px;
+        color: rgb(64, 64, 64);
+        position: relative;
+    }
+
+    #navbar-links a::after {
+        content: '';
+        position: absolute;
+        left: 30px;
+        right: 30px;
+        bottom: 0;
+        height: 1px;
+        background: rgba(65, 105, 255, 0.1);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+
+    #navbar-links a:hover::after {
+        transform: scaleX(1);
+    }
+
+    #navbar-cart {
+        /* margin: 20px 30px; */
+        padding: 0;
+    }
+
+    /* Overlay para cerrar el menú al hacer clic fuera */
+    .menu-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(3px);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .menu-overlay.active {
+        display: block;
+        opacity: 1;
     }
 
     .hamburger-menu span {
@@ -717,6 +831,18 @@ footer {
         justify-content: center;
         flex-wrap: wrap;
         gap: 10px;
+    }
+}
+
+/* Asegurar que las transiciones solo se apliquen al menú */
+@media screen and (max-width: 992px) {
+    #navbar-links,
+    #navbar-links li,
+    #navbar-links a,
+    .hamburger-menu,
+    .hamburger-menu span,
+    .menu-overlay {
+        transition: all 0.3s ease !important;
     }
 }
 

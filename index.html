@@ -14,6 +14,7 @@
 
 <body>
     <nav>
+        <div class="menu-overlay"></div> <!-- Se agrega aquí -->
         <div id="navbar">
             <div id="navbar-logo">
                 <img src="img/Logo/LogoColor3.png" alt="Logo" width="140" height="40">
@@ -280,15 +281,22 @@
     <script src="api/products.js"></script>
     <script src="js/scroll.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const hamburger = document.querySelector('.hamburger-menu');
-            const navLinks = document.querySelector('#navbar-links');
+        const hamburger = document.querySelector('.hamburger-menu');
+        const navLinks = document.querySelector('#navbar-links');
+        const overlay = document.querySelector('.menu-overlay');
 
-            hamburger.addEventListener('click', function () {
-                // Solo alternamos las clases active
-                hamburger.classList.toggle('active');
-                navLinks.classList.toggle('active');
-            });
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        });
+
+        overlay.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
         });
     </script>
     </script>
