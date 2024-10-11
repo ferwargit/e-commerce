@@ -71,10 +71,6 @@ nav {
     transition: background-color var(--transition-default);
 }
 
-/* .hamburger-menu:hover {
-    background: rgba(65, 105, 255, 0.1);
-} */
-
 /* Las líneas del hamburger menu */
 .hamburger-menu span {
     display: block;
@@ -572,20 +568,29 @@ footer {
 
 /* Media Queries Optimization */
 
-/* Large devices (laptops/desktops, hasta 1200px) */
-@media screen and (max-width: 1200px) {
-
-    #navbar,
-    #home-top-wrapper {
+/* 1280x1024 */
+@media screen and (max-width: 1280px) {
+    #navbar {
         width: 95%;
     }
 
-    .product-section-description {
-        width: 60%;
+    .product-section-items-wrapper {
+        width: 90%;
+        justify-content: center;
+        gap: var(--spacing-lg);
+    }
+
+    .product-item {
+        max-width: 250px;
     }
 
     .promo-box {
-        width: 85%;
+        width: 95%;
+        grid-template-columns: 45% 55%;
+    }
+
+    .promo-content {
+        padding: var(--spacing-lg);
     }
 }
 
@@ -670,11 +675,6 @@ footer {
         justify-content: center;
         align-items: center;
     }
-
-    /* .hamburger-menu span {
-        background-color: var(--color-gray-dark);
-        height: 3px;
-    } */
 
     /* Menu overlay */
     .menu-overlay {
@@ -883,6 +883,8 @@ footer {
         width: 90%;
     }
 }
+
+
 
 /* Performance optimizations for mobile */
 @media screen and (max-width: 992px) {
