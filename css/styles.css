@@ -58,56 +58,70 @@ nav {
     position: relative;
 }
 
+/* Estilos base del hamburger menu - Oculto por defecto */
 .hamburger-menu {
-    display: none;
-    /* display: flex; */
-    cursor: pointer;
-    /* padding: var(--spacing-sm); */
-    z-index: 1000;
+    display: none; /* Oculto por defecto en desktop */
     width: 40px;
     height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(65, 105, 255, 0.2);
     border-radius: var(--border-radius-full);
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(65, 105, 255, 0.1);
+    position: relative;
+    cursor: pointer;
     transition: background-color var(--transition-default);
 }
 
-.hamburger-menu:hover {
+/* .hamburger-menu:hover {
     background: rgba(65, 105, 255, 0.1);
-}
+} */
 
+/* Las líneas del hamburger menu */
 .hamburger-menu span {
     display: block;
-    width: 22px;
+    width: 20px; /* Reducido para mejor proporción */
     height: 2px;
     background-color: var(--color-gray-dark);
-    margin: 4px auto;
-    transition: transform var(--transition-default), opacity var(--transition-default);
-    border-radius: 2px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s ease;
 }
 
-/* Cuando el menú está activo */
+/* Ajustamos la posición vertical de cada línea */
+.hamburger-menu span:nth-child(1) {
+    top: 13px;
+}
+
+.hamburger-menu span:nth-child(2) {
+    top: 19px;
+}
+
+.hamburger-menu span:nth-child(3) {
+    top: 25px;
+}
+
+/* Modificamos las clases para el estado activo */
 .hamburger-menu.active {
     background: transparent;
-    /* Quitar fondo */
     border: none;
-    /* Quitar borde */
-    z-index: -1;
-    /* Mandar el botón detrás del contenido */
+}
+
+.hamburger-menu.active span {
+    width: 22px;
 }
 
 .hamburger-menu.active span:nth-child(1) {
-    transform: translateY(6px) rotate(45deg);
+    transform: translateX(-50%) rotate(45deg);
+    top: 19px;
 }
 
 .hamburger-menu.active span:nth-child(2) {
     opacity: 0;
-    transform: translateX(-10px);
 }
 
 .hamburger-menu.active span:nth-child(3) {
-    transform: translateY(-6px) rotate(-45deg);
+    transform: translateX(-50%) rotate(-45deg);
+    top: 19px;
 }
 
 #navbar-links {
@@ -652,23 +666,15 @@ footer {
 
     /* Hamburger menu */
     .hamburger-menu {
-        display: flex;
-        /* flex-direction: column; */
+        display: flex; /* Solo mostrar en mobile */
         justify-content: center;
         align-items: center;
-        width: 40px;
-        height: 40px;
-        background: rgba(255, 255, 255, 0.2);
-        border: 2px solid black;
-        border-radius: var(--border-radius-full);
-        z-index: 1000;
-        transition: background-color var(--transition-default);
     }
 
-    .hamburger-menu span {
+    /* .hamburger-menu span {
         background-color: var(--color-gray-dark);
         height: 3px;
-    }
+    } */
 
     /* Menu overlay */
     .menu-overlay {
@@ -883,5 +889,22 @@ footer {
     * {
         transition: none !important;
         animation: none !important;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+}
+
+/* Asegurarse de que está oculto en desktop */
+@media screen and (min-width: 993px) {
+    .hamburger-menu {
+        display: none !important;
+    }
+    
+    #navbar-links {
+        display: flex !important;
+        opacity: 1 !important;
+        transform: none !important;
     }
 }
